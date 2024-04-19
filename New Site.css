@@ -29,6 +29,18 @@ body {
   margin: 30px;
 }
 
+.circle-image {
+  width: 150px; /* 设置图片容器的宽度 */
+  height: 150px; /* 设置图片容器的高度 */
+  overflow: hidden; /* 隐藏超出容器范围的部分 */
+  border-radius: 50%; /* 将容器变成圆形 */
+}
+
+.circle-image img {
+  width: 100%; /* 使图片充满容器 */
+  height: auto; /* 让高度自适应，以保持原始比例 */
+}
+
 .toppic {
   float: left;
   width: 200px;
