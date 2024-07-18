@@ -1,163 +1,50 @@
-/* 整体的设置 */
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #faf9f7;
-  margin: 20px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-::selection {
-  background-color: #ec6c00;
-  color: white;
-}
-
-::-moz-selection {
-  background-color: #ec6c00;
-  color: white;
-}
-
-/* 顶部大盒子 */
-.topbox {
-  margin: 30px;
-}
-
-.circle-image {
-  width: 150px; /* 设置图片容器的宽度 */
-  height: 150px; /* 设置图片容器的高度 */
-  overflow: hidden; /* 隐藏超出容器范围的部分 */
-  border-radius: 50%; /* 将容器变成圆形 */
-}
-
-.circle-image img {
-  width: 100%; /* 使图片充满容器 */
-  height: auto; /* 让高度自适应，以保持原始比例 */
-}
-
-.toppic {
-  float: left;
-  width: 200px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-}
-
-.toppic img {
-  vertical-align: middle;
-}
-
-.topmenu {
-  float: right;
-  width: 80%;
-  text-align: right;
-  padding: 5px;
-}
-
-.topmenu li {
-  list-style-type: none;
-  display: inline-block;
-  margin: 15px;
-}
-
-.topmenu a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-}
-
-.topmenu a:hover {
-  color: #ec6c00;
-  padding-bottom: 4px;
-  border-bottom: 4px solid #ec6c00;
-}
-
-/* 中部float盒子 */
-/*.middlebox {
-  background-color: #ebe3d8;
-}*/
-
-.column {
-  padding: 15px;
-}
-
-.sidemenu {
-  float: left;
-  width: 25%;
-}
-
-.content {
-  float: right;
-  width: 70%;
-}
-
-.sidemenu ul {
-  list-style-type: none;
-  margin: 1em 0 0 1em;
-  padding: 0;
-}
-
-.sidemenu li a {
-  display: block;
-  text-decoration: none;
-  margin-bottom: 4px;
-  padding: 10px;
-  background-color: antiquewhite;
-  text-indent: 1em;
-  color: black;
-  width: 12em;
-}
-
-.sidemenu li a:hover {
-  background-color: #ec6c00;
-  color: white;
-}
-
-.content h1 {
-  margin-bottom: 1em;
-  color: rgb(18, 18, 18);
-}
-
-.content img,
-.content p {
-  width: 90%;
-}
-
-.content img {
-  opacity: 0.8;
-}
-
-.content img:hover {
-  opacity: 1;
-}
-
-/* 底部 */
-.footer {
-  height: 100px;
   margin: 0;
+  padding: 50px 10%;
+  display: flex;
+  justify-content: center; /* 水平居中内容 */
 }
-
-.button {
-  background-color: #9c8f7d;
-  color: azure;
-  width: 100px;
+.left-section {
+  position: fixed;
+  width: 250px;
+  top: 50px;
+  background-color: lightblue;
+}
+.right-section {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+.navbar {
+  position: fixed;
   height: 50px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1em;
+  top: 0;
+  right: 10%; /* 调整右侧边距，使其不贴边 */
+  z-index: 1;
+  background-color: lightgreen;
+  width: 80%; /* 撑满整个右侧内容区域 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 右对齐导航链接 */
 }
-
-.button:hover {
-  background-color: #776b59;
+.content {
+  position: relative; /* 改为相对定位 */
+  padding-top: 0; /* 留出导航栏高度的空间 */
+  overflow-y: auto;
+  /* height: calc(100vh - 50px); 充满剩余的高度 */
+}
+.nav-links {
+  display: flex;
+  gap: 20px; /* 调整链接之间的间距 */
+}
+.podcasts-section {
+  backgro-und-color: lightpink;
+}
+.blogs-section {
+  backgro-und-color: lightsalmon;
+}
+.photos-section {
+  backg-round-color: lightgoldenrodyellow;
+}
+.photos {
+  display: flex;
 }
