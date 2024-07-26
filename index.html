@@ -4,50 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>个人网页</title>
-    <link rel="stylesheet" href="New Site.css" />
+    <link rel="stylesheet" href="New-Site.css" />
     <link rel="icon" href="image/潜在意识Logo.png" type="image/png" />
   </head>
   <body>
+
+    <!-- 顶部固定导航栏 -->
+
+      <div class="navbar">
+        <a href="#home-page" class="nav-link">首页</a>
+        <a href="#podcasts" class="nav-link">播客</a>
+        <a href="#blogs" class="nav-link">博客</a>
+        <a href="#photos" class="nav-link">影像</a>
+        <a href="#about" class="nav-link">关于</a>
+      </div>
     <!-- 左侧固定栏 -->
     <main>
       <div class="left-section">
         <div class="profile">
-          <img src="image/镜子圆.png" alt="头像" width="40px" />
-          <h2>速冻柠檬</h2>
+          <img
+            src="image/镜子圆.png"
+            alt="头像"
+            width="40px"
+            class="profile-image"
+          />
+          <h2 class="profile-name">速冻柠檬</h2>
         </div>
         <hr />
-        <div class="about">
-          <h3>About Me</h3>
+        <div class="about-part">
+          <h3 class="profile-title">关于</h3>
           <div class="quotes">
-            <p>生命在于喝水</p>
-            <p>生命在于运动</p>
+            <p>生命在于喝水,生命在于运动</p>
           </div>
         </div>
-        <div class="tags">
-          <h3>Tags</h3>
+        <div class="tags-part">
+          <h3 class="profile-title">标签</h3>
           <ul>
-            <li><a href="#tag1">碎碎念</a></li>
-            <li><a href="#tag2">日常</a></li>
+            <li><a href="#tag1" class="tag">碎碎念</a></li>
+            <li><a href="#tag2" class="tag">日常</a></li>
           </ul>
         </div>
       </div>
     </main>
-    <!-- 右侧 -->
-    <section>
-      <div class="right-section">
-        <!-- 顶部固定导航栏 -->
-        <div class="navbar">
-          <div class="nav-links">
-            <a href="#home-page">首页</a>
-            <a href="#photos">图片</a>
-            <a href="#blogs">博客</a>
-            <a href="#podcasts">播客</a>
-            <a href="#about">关于</a>
-            <div class="search-box">🔍<input type="text" /></div>
-          </div>
-        </div>
 
-        <!-- 正文内容 -->
+    <!-- 播客 -->
+    <section>
         <div class="content">
           <!-- 播客 -->
           <div class="podcasts-section">
@@ -57,10 +58,14 @@
             <div id="podcast-episodes">
               <!-- 这里将显示播客的节目列表 -->
             </div>
-          </div>
-          <!-- 博客 -->
+            </div>
+        </div>
+     </section>
+
+    <!-- 博客 -->
+    <section>
           <div class="blogs-section">
-            <h2>博客</h2>
+            <h2 class="content-title">博客</h2>
             <div>
               <ul>
                 <li>
@@ -71,28 +76,42 @@
                 <li>
                   <a href="文章链接2">随意码住了网页</a
                   ><span class="blogs-tag">#学到了</span
-                  ><span class="blogs-date">20244-07-16</span>
+                  ><span class="blogs-date">2024-07-16</span>
                 </li>
               </ul>
             </div>
           </div>
+    </section>
 
-          <!-- 图片 -->
+      <!-- 图片 -->
+      <section>
           <div class="photos-section">
-            <h2>图片</h2>
+            <h2 class="content-title">图片</h2>
             <div class="photos">
               <div>
-                <img src="image/千灯湖上亭子.jpg" alt="图片1" width="30%" />
+                <img src="image/千灯湖上亭子.jpg" alt="图片1" />
+                <figcaption class="photo-discription">
+                  <span class="photo-tag">#lake</span>
+                  <span class="photo-date">2024-07-16</span>
+                </figcaption>
               </div>
               <div>
-                <img src="image/千灯湖粉色天空.jpg" alt="图片2" width="30%" />
+                <img src="image/千灯湖粉色天空.jpg" alt="图片2" />
+                <figcaption class="photo-discription">
+                  <span class="photo-tag">#sky</span>
+                  <span class="photo-date">2024-07-16</span>
+                </figcaption>
               </div>
-              <div><img src="image/灯笼树.jpg" alt="图片3" width="30%" /></div>
+              <div><img src="image/灯笼树.jpg" alt="图片3" /></div>
+              <figcaption class="photo-discription">
+                <span class="photo-tag">#tree</span>
+                <span class="photo-date">2024-07-16</span>
+              </figcaption>
             </div>
           </div>
         </div>
       </div>
-    </section>
+   </section>
 
     <script src="New Site.js"></script>
   </body>

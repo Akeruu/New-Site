@@ -2,13 +2,13 @@ body {
   margin: 0;
   padding: 50px 10%;
   display: flex;
-  justify-content: center; /* 水平居中内容 */
+  justify-content: center; /*水平居中内容*/
 }
 .left-section {
   position: fixed;
   width: 250px;
   top: 50px;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 .right-section {
   margin-left: 250px;
@@ -20,9 +20,9 @@ body {
   top: 0;
   right: 10%; /* 调整右侧边距，使其不贴边 */
   z-index: 1;
-  background-color: lightgreen;
+  background-color: #fff;
   width: 80%; /* 撑满整个右侧内容区域 */
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: flex-end; /* 右对齐导航链接 */
 }
@@ -30,21 +30,24 @@ body {
   position: relative; /* 改为相对定位 */
   padding-top: 0; /* 留出导航栏高度的空间 */
   overflow-y: auto;
-  /* height: calc(100vh - 50px); 充满剩余的高度 */
+  height: calc(100vh - 50px); /*充满剩余的高度*/
 }
-.nav-links {
+/* .nav-links {
   display: flex;
   gap: 20px; /* 调整链接之间的间距 */
-}
+} */
+
 .podcasts-section {
-  backgro-und-color: lightpink;
+  /* background-color: lightpink; */
 }
 .blogs-section {
-  backgro-und-color: lightsalmon;
+  /* background-color: lightsalmon; */
 }
 .photos-section {
-  backg-round-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
 }
 .photos {
   display: flex;
 }
+
+.
