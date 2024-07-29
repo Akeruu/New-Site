@@ -10,6 +10,49 @@ a {
 
 ul {
   list-style: none;
+  /* padding-inline-start: 20px; */
+}
+
+div.side {
+  padding: 48.8px 45px;
+}
+div.main {
+  padding: 60px 45px;
+}
+
+/* aide */
+div.side {
+  /* background-color: lightcyan; */
+}
+.profile,
+.profile a {
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  justify-content: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.profile h2 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1.1px;
+  /* background-color: blueviolet; */
+}
+
+div.quotes span {
+  margin-left: 67px;
+  /* background-color: blue; */
+}
+
+.side hr {
+  margin-top: 16px;
 }
 .nav-li {
   margin: 1em 0;
@@ -22,4 +65,12 @@ ul {
   padding: 0 6px;
   border-radius: 4px;
   margin: 8px 4px 0 0;
+}
+
+.first-line-tag {
+  margin-top: 0;
+}
+/* main */
+.podcast-section h3 {
+  margin-top: 0;
 }
