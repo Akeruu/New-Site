@@ -1,53 +1,25 @@
 body {
   margin: 0;
-  padding: 50px 10%;
-  display: flex;
-  justify-content: center; /*水平居中内容*/
-}
-.left-section {
-  position: fixed;
-  width: 250px;
-  top: 50px;
-  /* background-color: lightblue; */
-}
-.right-section {
-  margin-left: 250px;
-  width: calc(100% - 250px);
-}
-.navbar {
-  position: fixed;
-  height: 50px;
-  top: 0;
-  right: 10%; /* 调整右侧边距，使其不贴边 */
-  z-index: 1;
-  background-color: #fff;
-  width: 80%; /* 撑满整个右侧内容区域 */
-  display: block;
-  align-items: center;
-  justify-content: flex-end; /* 右对齐导航链接 */
-}
-.content {
-  position: relative; /* 改为相对定位 */
-  padding-top: 0; /* 留出导航栏高度的空间 */
-  overflow-y: auto;
-  height: calc(100vh - 50px); /*充满剩余的高度*/
-}
-/* .nav-links {
-  display: flex;
-  gap: 20px; /* 调整链接之间的间距 */
-} */
-
-.podcasts-section {
-  /* background-color: lightpink; */
-}
-.blogs-section {
-  /* background-color: lightsalmon; */
-}
-.photos-section {
-  /* background-color: lightgoldenrodyellow; */
-}
-.photos {
+  padding: 0;
   display: flex;
 }
 
-.
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+.nav-li {
+  margin: 1em 0;
+  position: relative;
+}
+
+.tags-li {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0 6px;
+  border-radius: 4px;
+  margin: 8px 4px 0 0;
+}
