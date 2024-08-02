@@ -21,9 +21,7 @@ div.main {
 }
 
 /* aide */
-div.side {
-  /* background-color: lightcyan; */
-}
+
 .profile,
 .profile a {
   display: flex;
