@@ -3,35 +3,35 @@ body {
   padding: 0;
   display: flex;
 }
-
 a {
   text-decoration: none;
 }
-
 ul {
   list-style: none;
   /* padding-inline-start: 20px; */
 }
-
 div.side {
-  padding: 48.8px 45px;
+  padding: 38.8px 45px;
+  position: fixed;
 }
 div.main {
-  padding: 60px 45px;
+  padding: 50px 90px 50px 45px;
+  margin-left: 263.85px;
 }
-
 /* aide */
-
+div.side,
+nav.nav-part,
+div.tags-part {
+  width: 173.85px;
+}
 .profile,
 .profile a {
   display: flex;
   align-items: center;
 }
-
 .profile {
   justify-content: center;
 }
-
 .profile img {
   width: 50px;
   height: 50px;
@@ -43,12 +43,10 @@ div.main {
   letter-spacing: 1.1px;
   /* background-color: blueviolet; */
 }
-
 div.quotes span {
-  margin-left: 67px;
+  margin-left: 66px;
   /* background-color: blue; */
 }
-
 .side hr {
   margin-top: 16px;
 }
@@ -56,7 +54,6 @@ div.quotes span {
   margin: 1em 0;
   position: relative;
 }
-
 .tags-li {
   display: inline-block;
   border: 1px solid #ccc;
@@ -64,11 +61,260 @@ div.quotes span {
   border-radius: 4px;
   margin: 8px 4px 0 0;
 }
-
 .first-line-tag {
   margin-top: 0;
 }
 /* main */
-.podcast-section h3 {
+section {
+  margin-bottom: 40px;
+}
+/* podcast */
+p.podcast-about {
+  line-height: normal;
+}
+/* boke gpt */
+/* 播客样式 */
+.podcast-section h2 {
   margin-top: 0;
 }
+.podcast-section {
+  display: flex;
+  flex-direction: column;
+}
+.podcast-infor {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+.podcast-infor img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+.podcast-about {
+  flex: 1;
+}
+.podcast-episodes {
+  display: flex;
+  flex-direction: column;
+}
+.episode {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.date-duration {
+  display: flex;
+  justify-content: space-between;
+}
+.date,
+.duration {
+  color: grey;
+  font-size: 0.9em;
+}
+.title-play {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* 减小日期和标题的间距 */
+}
+.title {
+  margin-left: 5px; /* 减小日期和标题的间距 */
+  text-decoration: none;
+  color: black;
+  flex: 1;
+}
+/* 播放按钮样式 */
+.play-button {
+  border: none;
+  background-color: #0b1c7e; /* 按钮背景色 */
+  cursor: pointer;
+  width: 25px; /* 按钮宽度 */
+  height: 25px; /*按钮高度 */
+  border-radius: 50%; /* 圆形按钮 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* 按钮颜色 */
+  font-size: 0.8em;
+  font-family: Arial, sans-serif; /* 字体 */
+}
+
+.description {
+  color: grey;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.progress-bar-container {
+  display: none; /* 默认隐藏 */
+  margin-top: 5px;
+}
+.progress-bar {
+  width: 100%;
+  height: 4px; /* 细化进度条 */
+  background-color: #e0e0e0;
+  position: relative;
+}
+.progress {
+  height: 100%;
+  background-color: #0b1c7e;
+  width: 0;
+}
+/* boke gpt */
+
+/* 博客 */
+/* img.blog-cover {
+  width: 100px;
+  height: 100px;
+} */
+
+/* blog-gpt */
+.blog-item {
+  display: flex;
+  align-items: flex-start; /* 使图片和文本对齐 */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.blog-cover-wrapper {
+  width: 80px; /* 固定宽度 */
+  height: 80px; /* 高度与宽度一致，保持正方形 */
+  margin-right: 15px; /* 图片和文本之间的间距 */
+  position: relative;
+}
+
+.blog-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  flex: 1; /* 使内容部分占据剩余空间 */
+}
+
+.blog-item h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.blog-item h4 a {
+  color: #0b1c7e;
+  text-decoration: none;
+}
+
+.blog-item h4 a:hover {
+  text-decoration: underline;
+}
+
+.blog-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.blog-info .tags {
+  display: flex;
+  gap: 5px; /* 标签之间的间距 */
+}
+
+.blog-info .tag {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-info .tag:hover {
+  background-color: #d0d0d0;
+}
+
+.blog-info .date {
+  color: #999;
+}
+
+/* blog-gpt */
+
+/* photo */
+
+/* photo-gpt */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+/* 照片展示区样式 */
+.photos-section {
+  padding: 20px;
+  background-color: #f4f4f4; /* 背景颜色 */
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* 标题颜色 */
+  margin-bottom: 20px;
+  text-align: center; /* 标题居中对齐 */
+}
+
+.photos-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 左右两列布局 */
+  gap: 20px; /* 照片间距 */
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  grid-row-end: span auto; /* 自适应高度 */
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto; /* 保持原始比例 */
+  display: block;
+  object-fit: cover; /* 确保图片填满容器但不失真 */
+}
+
+.photo-item:hover .photo-info {
+  opacity: 1; /* 悬停时显示文字 */
+}
+
+.photo-info {
+  position: absolute;
+  bottom: -50px; /* 文字信息在图片外部显示 */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* 深色背景 */
+  color: #fff; /* 文字颜色 */
+  padding: 10px;
+  text-align: center; /* 文字居中对齐 */
+  opacity: 0; /* 默认隐藏文字 */
+  transition: opacity 0.3s ease, bottom 0.3s ease; /* 渐变过渡 */
+  font-size: 12px; /* 小号字体 */
+}
+
+.photo-item:hover .photo-info {
+  bottom: 0; /* 悬停时将文字移到图片下方 */
+}
+
+/* 媒体查询 - 响应式设计 */
+@media (max-width: 768px) {
+  .photos-content {
+    grid-template-columns: 1fr; /* 在小屏幕上显示一列 */
+  }
+}
+
+/* photo-gpt */
