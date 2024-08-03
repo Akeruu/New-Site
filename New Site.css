@@ -18,6 +18,7 @@ div.main {
   padding: 50px 90px 50px 45px;
   margin-left: 263.85px;
 }
+
 /* aide */
 div.side,
 nav.nav-part,
@@ -41,28 +42,62 @@ div.tags-part {
   margin: 0;
   padding: 0;
   letter-spacing: 1.1px;
-  /* background-color: blueviolet; */
+  color: #333;
 }
 div.quotes span {
   margin-left: 66px;
-  /* background-color: blue; */
+  color: #333;
 }
+/* 横线 */
 .side hr {
   margin-top: 16px;
 }
+/* 侧边栏标题 */
+.side h4 {
+  color: #333;
+}
+/* 空间 */
 .nav-li {
   margin: 1em 0;
   position: relative;
 }
+.nav-li a {
+  color: #222;
+}
+.nav-li a:hover {
+  color: #0b1c7e;
+  font-weight: bold;
+}
+/* 标签 */
+.tags-part a {
+  display: flex;
+  flex-direction: column;
+}
 .tags-li {
   display: inline-block;
-  border: 1px solid #ccc;
-  padding: 0 6px;
-  border-radius: 4px;
-  margin: 8px 4px 0 0;
+  margin: 4px;
+  font-size: 14px;
 }
 .first-line-tag {
   margin-top: 0;
+}
+.tags-part .tag,
+.blog-info .tag {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 3px 8px;
+  text-decoration: none;
+  color: #333;
+}
+.tags-part .tag:hover,
+.blog-info .tag:hover {
+  background-color: #e0c6b0;
+  color: #fff;
+}
+/* 插播-博客标签 */
+.blog-info .tags {
+  display: flex;
+  gap: 5px; /* 标签之间的间距 */
 }
 /* main */
 section {
@@ -208,7 +243,7 @@ p.podcast-about {
 }
 
 .blog-item h4 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .blog-info {
@@ -216,25 +251,7 @@ p.podcast-about {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  color: #666;
   margin-top: 10px;
-}
-
-.blog-info .tags {
-  display: flex;
-  gap: 5px; /* 标签之间的间距 */
-}
-
-.blog-info .tag {
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  padding: 3px 8px;
-  text-decoration: none;
-  color: #333;
-}
-
-.blog-info .tag:hover {
-  background-color: #d0d0d0;
 }
 
 .blog-info .date {
@@ -247,26 +264,12 @@ p.podcast-about {
 
 /* photo-gpt */
 /* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-/* 照片展示区样式 */
-.photos-section {
-  padding: 20px;
-  background-color: #f4f4f4; /* 背景颜色 */
-}
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
   color: #333; /* 标题颜色 */
   margin-bottom: 20px;
-  text-align: center; /* 标题居中对齐 */
 }
 
 .photos-content {
