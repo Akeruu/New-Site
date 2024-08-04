@@ -8,7 +8,6 @@ a {
 }
 ul {
   list-style: none;
-  /* padding-inline-start: 20px; */
 }
 div.side {
   padding: 38.8px 45px;
@@ -119,7 +118,6 @@ p.podcast-about {
 .podcast-infor {
   display: flex;
   align-items: center;
-  /* margin-bottom: 20px; */
 }
 .podcast-infor img {
   width: 150px;
@@ -198,11 +196,6 @@ p.podcast-about {
 /* boke gpt */
 
 /* 博客 */
-/* img.blog-cover {
-  width: 100px;
-  height: 100px;
-} */
-
 /* blog-gpt */
 .blog-item {
   display: flex;
@@ -263,60 +256,62 @@ p.podcast-about {
 /* photo */
 
 /* photo-gpt */
-/* 照片展示区样式 */
-
-.section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333; /* 标题颜色 */
-  margin-bottom: 20px;
-}
-
 .photos-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 左右两列布局 */
-  gap: 20px; /* 照片间距 */
+  column-count: 2; /* 两列布局 */
+  column-gap: 25px; /* 列之间的间距 */
 }
 
 .photo-item {
+  break-inside: avoid; /* 避免内容块被断开 */
+  margin-bottom: 25px; /* 图片和下方内容块之间的间距 */
   position: relative;
-  overflow: hidden;
-  grid-row-end: span auto; /* 自适应高度 */
+  display: inline-block;
+  width: 100%;
+  max-height: 538px; /* 设置最大高度 */
+  overflow: hidden; /* 隐藏超出部分 */
 }
 
 .photo-item img {
   width: 100%;
-  height: auto; /* 保持原始比例 */
+  height: auto;
   display: block;
-  object-fit: cover; /* 确保图片填满容器但不失真 */
-}
-
-.photo-item:hover .photo-info {
-  opacity: 1; /* 悬停时显示文字 */
+  object-fit: cover;
 }
 
 .photo-info {
   position: absolute;
-  bottom: -50px; /* 文字信息在图片外部显示 */
+  bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7); /* 深色背景 */
-  color: #fff; /* 文字颜色 */
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
   padding: 10px;
-  text-align: center; /* 文字居中对齐 */
-  opacity: 0; /* 默认隐藏文字 */
-  transition: opacity 0.3s ease, bottom 0.3s ease; /* 渐变过渡 */
-  font-size: 12px; /* 小号字体 */
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
+
+.photo-title {
+  font-size: 0.9em; /* 标题字体大小 */
+  margin-right: 5px; /* 标题与日期之间的间距 */
+}
+
+/* .date {
+  font-size: 0.9em;
+} */
 
 .photo-item:hover .photo-info {
-  bottom: 0; /* 悬停时将文字移到图片下方 */
+  opacity: 1;
 }
 
-/* 媒体查询 - 响应式设计 */
+/* 媒体查询：屏幕宽度小于 768px 时 */
 @media (max-width: 768px) {
   .photos-content {
-    grid-template-columns: 1fr; /* 在小屏幕上显示一列 */
+    column-count: 1; /* 单列布局 */
   }
 }
 
