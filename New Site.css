@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  min-width: 375px;
 }
 a {
   text-decoration: none;
@@ -70,6 +71,9 @@ div.quotes span {
 .nav-hidden {
   display: none;
 }
+/* .nav-hidden ul::before {
+  content: "👉 ";
+} */
 /* 标签 */
 .tags-part a {
   display: flex;
@@ -363,7 +367,7 @@ p.podcast-about {
     flex-direction: column; /* 确保侧边栏内容纵向排列 */
   }
   div.main {
-    padding: 10px;
+    padding: 10px 16px;
     margin-left: 0;
   }
   div.whole-pro {
@@ -380,17 +384,21 @@ p.podcast-about {
   }
   .nav-hidden {
     display: flex;
-
-    /* 横向排列 */
-    /* flex-direction: row;  */
-    /* 可选：使 .nav-hidden 和 .whole-pro 并列 */
-    /* justify-content: space-between; */
+    height: 88.4px;
+    margin-top: -88.4px;
+    margin-left: 194px;
+    align-items: center;
+    justify-content: right;
   }
   .nav-hidden ul {
-    padding-left: 0;
+    padding: 10px;
+    margin-bottom: 0;
   }
   .nav-hidden li {
-    margin: 0; /* 可选：设置横向间距 */
+    margin: 2px; /* 可选：设置横向间距 */
     display: inline;
+  }
+  .photo-item {
+    margin-bottom: 10px;
   }
 }
