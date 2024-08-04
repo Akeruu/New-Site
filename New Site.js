@@ -51,9 +51,25 @@ document.addEventListener("DOMContentLoaded", function () {
         playButton.classList.add("play-button");
         playButton.innerHTML = "&#9658;"; // Play icon
 
+        const descriptionContainer = document.createElement("div");
+        descriptionContainer.classList.add("description-container");
+
         const descriptionParagraph = document.createElement("p");
         descriptionParagraph.classList.add("description");
         descriptionParagraph.textContent = descriptionText;
+
+        const moreButton = document.createElement("span");
+        moreButton.classList.add("more-button");
+        moreButton.textContent = "更多"; // More button text
+
+        moreButton.addEventListener("click", () => {
+          descriptionParagraph.classList.toggle("expanded");
+          moreButton.textContent = descriptionParagraph.classList.contains(
+            "expanded"
+          )
+            ? "收起"
+            : "更多"; // 切换按钮文本
+        });
 
         const progressBarContainer = document.createElement("div");
         progressBarContainer.classList.add("progress-bar-container");
@@ -129,9 +145,34 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
+        // 处理描述的显示和隐藏
+        function checkDescriptionLines() {
+          const lineHeight = parseFloat(
+            window.getComputedStyle(descriptionParagraph).lineHeight
+          );
+          const maxHeight = 3 * lineHeight; // 两行的最大高度
+          const actualHeight = descriptionParagraph.scrollHeight;
+
+          if (actualHeight > maxHeight) {
+            moreButton.style.display = "block"; // 显示“更多”按钮
+            descriptionParagraph.classList.add("collapsed");
+          } else {
+            moreButton.style.display = "none"; // 隐藏“更多”按钮
+          }
+        }
+
+        // 确保描述计算在 DOM 完全加载后进行
+        setTimeout(checkDescriptionLines, 100); // 使用 setTimeout 确保计算在渲染后进行
+
+        // 监听屏幕宽度变化以重新计算描述
+        window.addEventListener("resize", checkDescriptionLines);
+
+        descriptionContainer.appendChild(descriptionParagraph);
+        descriptionContainer.appendChild(moreButton);
+
         episodeDiv.appendChild(dateDurationDiv);
         episodeDiv.appendChild(titlePlayDiv);
-        episodeDiv.appendChild(descriptionParagraph);
+        episodeDiv.appendChild(descriptionContainer); // 使用新的描述容器
         episodeDiv.appendChild(progressBarContainer);
 
         podcastEpisodesContainer.appendChild(episodeDiv);

@@ -67,6 +67,9 @@ div.quotes span {
   color: #0b1c7e;
   font-weight: bold;
 }
+.nav-hidden {
+  display: none;
+}
 /* 标签 */
 .tags-part a {
   display: flex;
@@ -82,7 +85,8 @@ div.quotes span {
 }
 .tags-part .tag,
 .blog-info .tag {
-  background-color: #e0e0e0;
+  background-color: #fff;
+  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 3px 8px;
   text-decoration: none;
@@ -90,8 +94,10 @@ div.quotes span {
 }
 .tags-part .tag:hover,
 .blog-info .tag:hover {
-  background-color: #e0c6b0;
-  color: #fff;
+  color: #0b1c7e;
+  font-weight: 600;
+  box-shadow: 0 0 5px 0 rgba(18, 10, 179, 0.242);
+  border: none;
 }
 /* 插播-博客标签 */
 .blog-info .tags {
@@ -177,7 +183,33 @@ p.podcast-about {
   color: grey;
   font-size: 0.8em;
   margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 默认显示的行数 */
 }
+
+.description.expanded {
+  -webkit-line-clamp: unset; /* 取消行数限制，显示完整文本 */
+  white-space: normal; /* 取消文本的单行显示 */
+}
+
+.more-button {
+  display: block;
+  color: #0b1c7e;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 0.8em;
+  text-decoration: none;
+  text-align: right;
+}
+
+.more-button:hover {
+  font-weight: bold;
+}
+
 .progress-bar-container {
   display: none; /* 默认隐藏 */
   margin-top: 5px;
@@ -227,16 +259,19 @@ p.podcast-about {
 
 .blog-item h4 {
   font-size: 16px;
+  font-weight: normal;
   margin: 0;
 }
 
 .blog-item h4 a {
-  color: #0b1c7e;
   text-decoration: none;
+  color: black;
 }
 
 .blog-item h4 a:hover {
+  color: #0b1c7e;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .blog-info {
@@ -288,7 +323,6 @@ p.podcast-about {
   padding: 10px;
   box-sizing: border-box;
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -296,23 +330,67 @@ p.podcast-about {
 }
 
 .photo-title {
-  font-size: 0.9em; /* 标题字体大小 */
-  margin-right: 5px; /* 标题与日期之间的间距 */
+  font-size: 0.9em;
+  margin-right: 5px;
 }
 
-/* .date {
-  font-size: 0.9em;
-} */
-
+.photo-info .date {
+  display: none;
+}
 .photo-item:hover .photo-info {
   opacity: 1;
 }
 
+/* photo-gpt */
 /* 媒体查询：屏幕宽度小于 768px 时 */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .photos-content {
     column-count: 1; /* 单列布局 */
   }
 }
 
-/* photo-gpt */
+/* 当屏幕宽度小于800px时，调整 aside 的显示和位置 */
+@media (max-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  div.side {
+    padding: 10px;
+    position: static;
+    display: flex;
+    flex-direction: column; /* 确保侧边栏内容纵向排列 */
+  }
+  div.main {
+    padding: 10px;
+    margin-left: 0;
+  }
+  div.whole-pro {
+    display: flex;
+    flex-direction: column; /* 确保内容纵向排列 */
+  }
+  /* .podcast-infor {
+    display: flex;
+    align-items: center;
+  } */
+  .nav-part,
+  .tags-part {
+    display: none;
+  }
+  .nav-hidden {
+    display: flex;
+
+    /* 横向排列 */
+    /* flex-direction: row;  */
+    /* 可选：使 .nav-hidden 和 .whole-pro 并列 */
+    /* justify-content: space-between; */
+  }
+  .nav-hidden ul {
+    padding-left: 0;
+  }
+  .nav-hidden li {
+    margin: 0; /* 可选：设置横向间距 */
+    display: inline;
+  }
+}
