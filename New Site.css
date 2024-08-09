@@ -6,6 +6,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 ul {
   list-style: none;
@@ -30,9 +31,11 @@ div.tags-part {
   display: flex;
   align-items: center;
 }
+
 .profile {
   justify-content: center;
 }
+
 .profile img {
   width: 50px;
   height: 50px;
@@ -42,11 +45,12 @@ div.tags-part {
   margin: 0;
   padding: 0;
   letter-spacing: 1.1px;
-  color: #333;
+  /* color: #333; */
 }
+
 div.quotes span {
   margin-left: 66px;
-  color: #333;
+  /* color: #333; */
 }
 /* 横线 */
 .side hr {
@@ -54,8 +58,9 @@ div.quotes span {
 }
 /* 侧边栏标题 */
 .side h4 {
-  color: #333;
+  /* color: #333; */
 }
+
 /* 空间 */
 .nav-li {
   margin: 1em 0;
@@ -112,10 +117,171 @@ div.quotes span {
 section {
   margin-bottom: 40px;
 }
+
+/* 切换模式 */
+/* 默认样式（白天模式） */
+
+/* 基本样式变量（白天模式） */
+:root {
+  --un-rc-base: 255, 255, 255; /* 基础颜色（背景色） */
+  --un-rc-invert: 0, 0, 0; /* 文字和图标颜色 */
+  --un-c-bg: #fff; /* 背景色 */
+  --un-c-bg-weak: #f9f9f9; /* 较弱的背景色（通常用于区分不同区域） */
+  --un-c-bg-mute: #f1f1f1; /* 低饱和度背景色（通常用于次要区域） */
+  --un-f-sys-sans: -apple-system, "Segoe UI", Oxygen, Ubuntu, "Droid Sans",
+    "Helvetica Neue"; /* 系统无衬线字体 */
+  --un-f-sys-serif: "Times New Roman", Georgia, Palatino, Times; /* 系统衬线字体 */
+  --un-f-cjk: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback",
+    "Microsoft YaHei"; /* CJK 字体（中文、日文、韩文） */
+  --un-f-mono: Menlo, Monaco, Consolas, "Courier New", monospace; /* 等宽字体 */
+  --un-f-base: var(--un-f-sys-sans), var(--un-f-cjk), sans-serif; /* 基础字体（主要字体） */
+  --un-f-heading: var(--un-f-sys-sans), var(--un-f-cjk), sans-serif; /* 标题字体 */
+  --un-rc-accent: var(--t-rc-primary); /* 强调色（主题颜色） */
+  --un-c-text: rgba(var(--un-rc-invert), 0.82); /* 主要文本颜色 */
+  --un-c-text-light: rgba(var(--un-rc-invert), 0.58); /* 次要文本颜色 */
+  --un-c-text-strong: rgba(var(--un-rc-invert), 0.94); /* 强调文本颜色 */
+  --un-c-text-mute: rgba(
+    var(--un-rc-invert),
+    0.2
+  ); /* 静音文本颜色（通常用于注释或提示） */
+  --un-c-divider: rgba(var(--un-rc-invert), 0.08); /* 分隔线颜色 */
+  --un-c-divider-light: rgba(var(--un-rc-invert), 0.04); /* 较轻的分隔线颜色 */
+  --un-c-accent: rgb(var(--un-rc-accent)); /* 强调色（RGB 形式） */
+  --tc-c-primary: var(--un-c-accent); /* 主要链接颜色 */
+  --tc-c-link: var(--un-c-accent); /* 链接颜色 */
+}
+
+/* 夜间模式变量 */
+.dark-theme {
+  --un-rc-base: 19, 23, 31; /* 夜间模式背景色的 RGB 值（#13171F） */
+  --un-rc-invert: 255, 255, 255; /* 夜间模式下的文本颜色（通常是白色） */
+  --un-c-bg: #13171f; /* 夜间模式背景色 */
+  --un-c-bg-weak: #3a3a3a; /* 夜间模式下较弱的背景色 */
+  --un-c-bg-mute: #444; /* 夜间模式下低饱和度背景色 */
+  --un-rc-accent: var(
+    --t-rc-secondary
+  ); /* 夜间模式下的强调色（可能与白天模式不同） */
+  --un-c-text: rgba(var(--un-rc-invert), 0.82); /* 夜间模式下的主要文本颜色 */
+  --un-c-text-light: rgba(
+    var(--un-rc-invert),
+    0.58
+  ); /* 夜间模式下的次要文本颜色 */
+  --un-c-text-strong: rgba(
+    var(--un-rc-invert),
+    0.94
+  ); /* 夜间模式下的强调文本颜色 */
+  --un-c-text-mute: rgba(
+    var(--un-rc-invert),
+    0.2
+  ); /* 夜间模式下的静音文本颜色 */
+  --un-c-divider: rgba(var(--un-rc-invert), 0.08); /* 夜间模式下的分隔线颜色 */
+  --un-c-divider-light: rgba(
+    var(--un-rc-invert),
+    0.04
+  ); /* 夜间模式下较轻的分隔线颜色 */
+  --un-c-accent: rgb(var(--un-rc-accent)); /* 夜间模式下的强调色（RGB 形式） */
+}
+
+/* 夜间模式的样式变化 */
+.dark-theme,
+.dark-theme a {
+  background-color: var(--un-c-bg);
+  color: var(--un-c-text);
+}
+
+.dark-theme .blog-item {
+  background-color: #181c25;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+}
+
+.theme-toggle > input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.theme-toggle > label {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 22px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background-color: rgba(var(--un-rc-invert), 0.1); /*修改bgc*/
+  cursor: pointer;
+}
+
+.theme-toggle input:focus + label {
+  outline: 5px auto;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.theme-toggle_handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: rgba(var(--un-rc-base), 0.86); /*修改bgc*/
+  transition: transform 0.3s; /*多的*/
+}
+
+.theme-toggle input:checked + label .theme-toggle_handle {
+  transform: translateX(18px);
+}
+
+.theme-toggle svg {
+  position: absolute;
+  fill: currentColor;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  z-index: 2;
+  transition: color 0.15s linear;
+}
+
+.theme-toggle .sun {
+  left: 5px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle .moon {
+  right: 5px;
+  display: block;
+}
+
+.dark-theme .moon {
+  display: block;
+}
+
+.dark-theme .sun {
+  display: block;
+}
+
 /* podcast */
 p.podcast-about {
   line-height: normal;
 }
+
 /* boke gpt */
 /* 播客样式 */
 .podcast-section h2 {
@@ -202,7 +368,6 @@ p.podcast-about {
 
 .more-button {
   display: block;
-  color: #0b1c7e;
   cursor: pointer;
   margin-top: 5px;
   font-size: 0.8em;
@@ -212,6 +377,7 @@ p.podcast-about {
 
 .more-button:hover {
   font-weight: bold;
+  color: #0b1c7e;
 }
 
 .progress-bar-container {
@@ -236,7 +402,7 @@ p.podcast-about {
 .blog-item {
   display: flex;
   align-items: flex-start; /* 使图片和文本对齐 */
-  background-color: #fff;
+  /* background-color: #fff; */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -269,7 +435,6 @@ p.podcast-about {
 
 .blog-item h4 a {
   text-decoration: none;
-  color: black;
 }
 
 .blog-item h4 a:hover {
@@ -385,19 +550,29 @@ p.podcast-about {
   .nav-hidden {
     display: flex;
     height: 88.4px;
-    margin-top: -88.4px;
+    margin-top: -30.4px;
     margin-left: 194px;
+    margin-right: 16px;
     align-items: center;
     justify-content: right;
   }
   .nav-hidden ul {
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     margin-bottom: 0;
   }
   .nav-hidden li {
     margin: 2px; /* 可选：设置横向间距 */
     display: inline;
   }
+
+  .theme-toggle {
+    display: flex;
+    position: static;
+    justify-content: right;
+    margin-top: -80px;
+    margin-right: 16px;
+  }
+
   .photo-item {
     margin-bottom: 10px;
   }

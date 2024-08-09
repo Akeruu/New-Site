@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 处理 RSS 订阅
   const rssUrl = "https://www.ximalaya.com/album/72549254.xml";
   const podcastEpisodesContainer = document.querySelector(".podcast-episodes");
 
@@ -181,4 +182,23 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Error fetching RSS feed:", error);
     });
+
+  // 处理主题切换
+  const themeToggle = document.getElementById("js-theme-toggle");
+
+  // Check for saved theme preference
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark-theme");
+    themeToggle.checked = true;
+  }
+
+  themeToggle.addEventListener("change", function () {
+    if (this.checked) {
+      document.documentElement.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  });
 });
