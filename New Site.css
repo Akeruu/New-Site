@@ -193,6 +193,10 @@ section {
   background-color: #181c25;
 }
 
+.dark-theme a:hover {
+  color: #e0c6b0;
+}
+
 /* 主题切换按钮 */
 .theme-toggle {
   position: fixed;
@@ -221,13 +225,14 @@ section {
   height: 22px;
   border-radius: 12px;
   flex-shrink: 0;
-  background-color: rgba(var(--un-rc-invert), 0.1); /*修改bgc*/
+  /*修改bgc*/
+  background-color: rgba(var(--un-rc-invert), 0.1);
   cursor: pointer;
 }
 
 .theme-toggle input:focus + label {
-  outline: 5px auto;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 2px solid;
+  /* outline: 5px auto -webkit-focus-ring-color; */
 }
 
 .theme-toggle_handle {
@@ -237,7 +242,8 @@ section {
   width: 18px;
   height: 18px;
   border-radius: 18px;
-  background-color: rgba(var(--un-rc-base), 0.86); /*修改bgc*/
+  /*修改bgc*/
+  background-color: rgba(var(--un-rc-base), 0.86);
   transition: transform 0.3s; /*多的*/
 }
 
