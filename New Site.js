@@ -183,6 +183,20 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error fetching RSS feed:", error);
     });
 
+  // Initialize Slick Slider
+  $(document).ready(function () {
+    // Initialize Slick Slider
+    $(".slick-slider").slick({
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  });
+
   // 处理主题切换
   const themeToggle = document.getElementById("js-theme-toggle");
 
