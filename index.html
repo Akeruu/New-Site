@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
-    <link rel="stylesheet" href="New Site.css" />
+    <link rel="stylesheet" href="styles/New Site.css" />
 
     <link rel="icon" href="image/潜在意识Logo.png" type="image/png" />
   </head>
@@ -34,9 +34,15 @@
         <nav class="nav-part">
           <h4>空间</h4>
           <ul>
-            <li class="nav-li"><a href="#podcasts">播客 | 潜在意识</a></li>
-            <li class="nav-li"><a href="#photos">影像 | 学习中</a></li>
-            <li class="nav-li"><a href="#blogs">博客 | 自留地</a></li>
+            <li class="nav-li">
+              <a href="podcast/podcast.html" target="_blank">播客 | 潜在意识</a>
+            </li>
+            <li class="nav-li">
+              <a href="photo/photo.html" target="_blank">影像 | 学习中</a>
+            </li>
+            <li class="nav-li">
+              <a href="blog/blog.html" target="_blank">博客 | 自留地</a>
+            </li>
             <li class="nav-li"><a href="#about">关于 | About me</a></li>
           </ul>
         </nav>
@@ -94,9 +100,15 @@
 
     <nav class="nav-hidden">
       <ul>
-        <li class="nav-li"><a href="#podcasts">播客</a></li>
-        <li class="nav-li"><a href="#photos">影像</a></li>
-        <li class="nav-li"><a href="#blogs">博客</a></li>
+        <li class="nav-li">
+          <a href="podcast/podcast.html" target="_blank">播客</a>
+        </li>
+        <li class="nav-li">
+          <a href="photo/photo.html" target="_blank">影像</a>
+        </li>
+        <li class="nav-li">
+          <a href="blog/blog.html" target="_blank">博客</a>
+        </li>
         <li class="nav-li"><a href="#about">关于</a></li>
       </ul>
     </nav>
@@ -108,7 +120,9 @@
         </section> -->
 
         <section class="podcast-section">
-          <h2 class="section-title">播客 | 潜在意识</h2>
+          <h2 class="section-title">
+            <a href="podcast/podcast.html" target="_blank">播客 | 潜在意识</a>
+          </h2>
           <div class="podcast-infor">
             <img src="image/潜在意识Logo.png" />
             <p class="podcast-about">
@@ -122,8 +136,11 @@
           </div>
         </section>
 
-        <!-- <section class="photos-section">
-          <h2 class="section-title">影像 | 学习中</h2>
+        <!-- 以下是并列展示 -->
+        <section class="photos-section">
+          <h2 class="section-title">
+            <a href="photo/photo.html" target="_blank">影像 | 学习中</a>
+          </h2>
 
           <div class="photos-content">
             <div class="photo-item">
@@ -187,16 +204,65 @@
                 <span class="date">2024-06-30</span>
               </div>
             </div>
-          </div>
-        </section> -->
 
-        <section class="photos-section">
+            <div class="photo-item">
+              <img src="image/白云山山坡.jpg" alt="白云山山坡" />
+              <div class="photo-info">
+                <span class="photo-title">白云山山坡</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+
+            <div class="photo-item">
+              <img src="image/白云山树叶.jpg" alt="白云山树叶" />
+              <div class="photo-info">
+                <span class="photo-title">白云山树叶</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+
+            <div class="photo-item">
+              <img src="image/千灯湖建筑.jpg" alt="千灯湖建筑" />
+              <div class="photo-info">
+                <span class="photo-title">千灯湖建筑</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+
+            <div class="photo-item">
+              <img src="image/千灯湖上塔.jpg" alt="千灯湖上塔" />
+              <div class="photo-info">
+                <span class="photo-title">千灯湖上塔</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+
+            <div class="photo-item">
+              <img src="image/摩托车后.jpg" alt="摩托车后" />
+              <div class="photo-info">
+                <span class="photo-title">摩托车后</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+
+            <div class="photo-item">
+              <img src="image/湖中喷泉.jpg" alt="湖中喷泉" />
+              <div class="photo-info">
+                <span class="photo-title">湖中喷泉</span>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 以下是轮播模式 -->
+        <!-- <section class="photos-section">
           <h2 class="section-title">影像 | 学习中</h2>
 
           <div class="photos-content slick-slider">
             <div class="photo-item slick-slide">
               <img src="image/白云山天空.jpg" alt="白云山天空" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">白云山天空</span>
                 <span class="date">2024-06-30</span>
               </div>
@@ -204,7 +270,7 @@
 
             <div class="photo-item slick-slide">
               <img src="image/千灯湖上亭子.jpg" alt="千灯湖上亭子" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">千灯湖上亭子</span>
                 <span class="date">2024-06-30</span>
               </div>
@@ -212,7 +278,7 @@
 
             <div class="photo-item slick-slide">
               <img src="image/白云山小路.jpg" alt="白云山小路" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">白云山小路</span>
                 <span class="date">2024-06-30</span>
               </div>
@@ -220,21 +286,21 @@
 
             <div class="photo-item slick-slide">
               <img src="image/千灯湖蓝色天空.jpg" alt="千灯湖蓝色天空" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">千灯湖蓝色天空</span>
                 <span class="date">2024-06-30</span>
               </div>
             </div>
             <div class="photo-item slick-slide">
               <img src="image/彩虹2.jpg" alt="彩虹2" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">遇见彩虹yeah</span>
                 <span class="date">2024-06-30</span>
               </div>
             </div>
             <div class="photo-item slick-slide">
               <img src="image/云与建筑.jpg" alt="云与建筑" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">云与建筑</span>
                 <span class="date">2024-06-30</span>
               </div>
@@ -242,7 +308,7 @@
 
             <div class="photo-item slick-slide">
               <img src="image/灯笼树.jpg" alt="灯笼树" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">灯笼树</span>
                 <span class="date">2024-06-30</span>
               </div>
@@ -250,29 +316,29 @@
 
             <div class="photo-item slick-slide">
               <img src="image/白云山树叶.jpg" alt="白云山树叶" />
-              <div class="photo-info">
+              <div class="photo-info slick-slide-info">
                 <span class="photo-title">白云山树叶</span>
                 <span class="date">2024-06-30</span>
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
 
-        <section class="blogs-section">
+        <!-- <section class="blogs-section">
           <h2 class="section-title">博客 | 自留地</h2>
 
           <div class="blog-item">
             <div class="blog-cover-wrapper">
-              <img src="image/白云山山坡.jpg" class="blog-cover" />
+              <img src="image/蓝色帷幔.png" class="blog-cover" />
             </div>
             <div class="blog-content">
-              <h4><a href="">再度前往白云山遇到的很有意思的事情</a></h4>
+              <h4><a href="">蓝色帷幔</a></h4>
               <div class="blog-info">
                 <div class="tags">
                   <a href="richang" class="tag">日常</a>
                   <a href="susuinian" class="tag">碎碎念</a>
                 </div>
-                <span class="date">2024-06-30</span>
+                <span class="date">2024-09-15</span>
               </div>
             </div>
           </div>
@@ -308,12 +374,76 @@
               </div>
             </div>
           </div>
+        </section> -->
+
+        <section class="blogs-section">
+          <h2 class="section-title">
+            <a href="blog/blog.html" target="_blank">博客 | 自留地</a>
+          </h2>
+
+          <div class="blog-item">
+            <div class="blog-cover-wrapper">
+              <img src="image/blog/蓝色帷幔.png" class="blog-cover" />
+            </div>
+            <div class="blog-content">
+              <h4>
+                <a href="blog/blue-veil.html" target="_blank"
+                  >蓝色帷幔 ・ 一次住院的情绪记录</a
+                >
+              </h4>
+              <div class="blog-info">
+                <div class="tags">
+                  <a href="richang" class="tag">日常</a>
+                  <a href="susuinian" class="tag">碎碎念</a>
+                </div>
+                <span class="date">2024-09-15</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-item">
+            <div class="blog-cover-wrapper">
+              <img src="image/blog/身体记忆.jpg" class="blog-cover" />
+            </div>
+            <div class="blog-content">
+              <h4>
+                <a href="blog/body-memory.html" target="_blank">身体记忆</a>
+              </h4>
+              <div class="blog-info">
+                <div class="tags">
+                  <a href="richang" class="tag">日常</a>
+                  <a href="susuinian" class="tag">自我</a>
+                </div>
+                <span class="date">2022-09-20</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-item">
+            <div class="blog-cover-wrapper">
+              <img src="image/blog/在吗.jpg" class="blog-cover" />
+            </div>
+            <div class="blog-content">
+              <h4>
+                <a href="blog/Hello-ChrisLee.html" target="_blank"
+                  >Hello! Chris Lee</a
+                >
+              </h4>
+              <div class="blog-info">
+                <div class="tags">
+                  <a href="richang" class="tag">音乐</a>
+                  <a href="susuinian" class="tag">碎碎念</a>
+                </div>
+                <span class="date">2024-06-30</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="slick/slick.min.js"></script>
-    <script src="New Site.js"></script>
+    <script src="scripts/New Site.js"></script>
   </body>
 </html>
