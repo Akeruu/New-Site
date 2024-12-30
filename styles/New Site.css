@@ -544,13 +544,15 @@ section {
   text-align: center;
 }
 
-/* photo-gpt */
-.photos-content {
+/* photo-gpt and meme part*/
+.photos-content,
+.meme-content {
   column-count: 2; /* 两列布局 */
   column-gap: 20px; /* 列之间的间距 */
 }
 
-.photo-item {
+.photo-item,
+.meme-item {
   break-inside: avoid; /* 避免内容块被断开 */
   margin-bottom: 20px; /* 图片和下方内容块之间的间距 */
   position: relative;
@@ -560,14 +562,16 @@ section {
   overflow: hidden; /* 隐藏超出部分 */
 }
 
-.photo-item img {
+.photo-item img,
+.meme-item img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-.photo-info {
+.photo-info,
+.meme-info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -583,22 +587,26 @@ section {
   transition: opacity 0.3s;
 }
 
-.photo-title {
+.photo-title,
+.meme-title {
   font-size: 0.9em !important;
   margin-right: 5px;
 }
 
-.photo-info .date {
+.photo-info .date,
+.meme-info .date {
   display: none;
 }
-.photo-item:hover .photo-info {
+.photo-item:hover .photo-info,
+.meme-item:hover .meme-info {
   opacity: 1;
 }
 
-/* photo-gpt */
+/* photo-gpt and meme part*/
 /* 媒体查询：屏幕宽度小于 768px 时 */
 @media (max-width: 900px) {
-  div.photos-content {
+  div.photos-content,
+  div.meme-content {
     column-count: 1 !important; /* 单列布局 */
     column-gap: 20px !important; /* 列之间的间距 */
   }
@@ -659,7 +667,8 @@ section {
     margin-right: 16px;
   }
 
-  div.photo-item {
+  div.photo-item,
+  div.meme-item {
     break-inside: avoid !important; /* 避免内容块被断开 */
     /* margin-bottom: 20px; 图片和下方内容块之间的间距 */
     position: relative !important;
